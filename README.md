@@ -1,68 +1,15 @@
-# grunt-stencil
+# grunt-zetzer
 
-Stencil is a [Grunt](http://gruntjs.com/) plugin for templating that generates static HTML files from given components. Stencil provides the following:
-
-- A way to modularise your HTML source files: each file can include an arbitrary number of partial files, or be wrapped with a template file.
-- Built in support for [the doT.js templating language](http://olado.github.io/doT/index.html), which allows passing of arbitrary variables to your HTML files.
-- Built in support for markdown
-- Meta data headers in the beginning of each file to specify variables that should be used in the file (that are accessible from partials included in the file, and templates the file is injected into).
-
-## Documentation
-
-See the __[Wiki pages](https://github.com/cambridge-healthcare/grunt-stencil/wiki)__ for full documentation.
-
-## Getting Started
-This plugin requires Grunt `~0.4.1`
-
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
+Grunt plugin for [Zetzer][zetzer]. More documentation in the
+[Zetzer][zetzer] repository.
 
 ```shell
 npm install grunt-stencil --save-dev
 ```
 
-Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
-
 ```js
 grunt.loadNpmTasks('grunt-stencil');
 ```
-
-## The "stencil" task
-
-### Options
-
-*A more detailed explanation of all options can be found in [the Wiki](https://github.com/cambridge-healthcare/grunt-stencil/wiki/Options).*
-
-Each of the following is optional.
-
-#### options.dot_template_settings
-Type: `Object`
-Default value: `{}`
-
-An object that specifies the template settings that are passed to the doT compiler (see [doT.js](http://olado.github.io/doT/index.html)).
-
-#### options.env
-Type: `Object`
-Default value: `{}`
-
-Initial environment seen by all compiler, doT.js sees it as `it`. This environment is for each file with their header fields.
-
-#### options.templates
-Type: `String`
-Default value: `"."`
-
-A String value specifying the location of all templates. When specified, this will allow to call templates in pages' meta data without the full path to it (the specified `templates` will be prepended).
-
-#### options.partials
-Type: `String`
-Default value: `"."`
-
-A String value specifying the location of all partials. When specified, this will allow to call partial `include` functions without the full path (the specified `partials` will be prepended).
-
-#### options.meta_data_separator
-Type: `String | RexExp`
-Default value: `/\r?\n\r?\n/`
-
-A String value specifying the characters to search for when separating meta data from the content of a file. By default, the JSON header of a file is considered to end after the first blank line in the file.
 
 ### Usage Examples
 
@@ -129,14 +76,3 @@ Once we run tests and the fixture is failing, we can implement any necessary fea
 Once all the unit tests pass, we can integrate new code back to the task with making the fixture test pass in mind :) .
 
 If you take a look at any file in `lib/` you can notice that there's no dependencies between modules. All dependencies are injected in the task file `tasks/stencil.js`. That's the place where the integration happens.
-
-## Release History
-
-- __version 1.1.0__ (1st June, 2014) - apply doT to all HTML files
-- __version 1.0.2__ (10th December, 2013) - Windows compatibility
-- __version 1.0.1__ (24th November, 2013) - fix for new markdown version
-- __version 1.0.0__ (7th October, 2013) - first stable release
-- __version 0.1.0__ (4th October, 2013) - big refactor and change of specification
-- __version 0.0.3__ (19th September, 2013) - fix dependencies in `package.json`
-- __version 0.0.2__
-- __version 0.0.1__ (16th September, 2013)

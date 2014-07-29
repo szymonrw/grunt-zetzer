@@ -1,29 +1,20 @@
 {
-  "name": "grunt-stencil",
+  "name": "grunt-zetzer",
   "description": "A Grunt templating plugin to generate static HTML files from given pages, templates and partials written in either pure HTML, doT.js, or markdown.",
   "version": "1.1.0",
-  "homepage": "https://github.com/cambridge-healthcare/grunt-stencil",
-  "author": {
-    "name": "Cambridge Healthcare",
-    "email": ""
-  },
+  "homepage": "https://github.com/brainshave/zetzer",
+  "author": "Szymon Witamborski <simon@brainshave.com>"
   "contributors": [
-    "Elise Hein <elise@howareyou.com>",
-    "Szymon Witamborski <szymon@howareyou.com>"
+    "Elise Hein <elisehein@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/cambridge-healthcare/grunt-stencil.git"
+    "url": "git://github.com/brainshave/grunt-zetzer.git"
   },
   "bugs": {
-    "url": "https://github.com/cambridge-healthcare/grunt-stencil/issues"
+    "url": "https://github.com/brainshave/grunt-zetzer/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/cambridge-healthcare/grunt-stencil/blob/master/LICENSE-MIT"
-    }
-  ],
+  "licenses": "MIT",
   "main": "Gruntfile.js",
   "engines": {
     "node": ">= 0.8.0"
