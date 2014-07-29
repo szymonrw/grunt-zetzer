@@ -1,13 +1,4 @@
-/*
- * grunt-stencil
- * https://github.com/cambridge-healthcare/grunt-stencil
- *
- * Copyright (c) 2013 Cambridge Healthcare
- * Licensed under the MIT license.
- */
-
 "use strict";
-
 
 var JASMINE_CMD = (process.platform === "win32"
                    ? "\"node_modules/.bin/jasmine-node.cmd\""
@@ -27,7 +18,7 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
 
-    stencil: {
+    zetzer: {
       fixtures: {
         options: {
           partials: "spec/includes",

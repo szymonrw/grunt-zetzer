@@ -76,3 +76,5 @@ Once we run tests and the fixture is failing, we can implement any necessary fea
 Once all the unit tests pass, we can integrate new code back to the task with making the fixture test pass in mind :) .
 
 If you take a look at any file in `lib/` you can notice that there's no dependencies between modules. All dependencies are injected in the task file `tasks/stencil.js`. That's the place where the integration happens.
+
+[zetzer]: https://github.com/brainshave/zetzer

@@ -1,26 +1,18 @@
 "use strict";
 
-/*
- * grunt-stencil
- * https://github.com/cambridge-healthcare/grunt-stencil
- *
- * Copyright (c) 2013 Cambridge Healthcare
- * Licensed under the MIT license.
- */
+var file = require("../file");
 
-var file = require("../lib/file");
-
-var parse_setup = require("../lib/parse");
-var compilers_setup = require("../lib/compilers");
-var process_file_setup = require("../lib/process_file");
+var parse_setup = require("zetzer/parse");
+var compilers_setup = require("zetzer/compilers");
+var process_file_setup = require("zetzer/process");
 
 var _ = require("underscore");
 
 module.exports = function(grunt) {
 
-  grunt.registerMultiTask("stencil", "HTML compilation from separate components with doT and Markdown", stencil);
+  grunt.registerMultiTask("zetzer", "HTML compilation from separate components with doT and Markdown", zetzer);
 
-  function stencil () {
+  function zetzer () {
 
     var options = this.options({
       partials: ".",
@@ -35,10 +27,10 @@ module.exports = function(grunt) {
     var compile =  compilers_setup({
       read_content: _.compose(parse.content, grunt.file.read),
       compilers: [
-        require("../lib/dot_compiler")({
+        require("zetzer/dot")({
           template_settings: options.dot_template_settings
         }),
-        require("../lib/markdown_compiler")
+        require("zetzer/markdown")
       ]
     });
 

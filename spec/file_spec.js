@@ -1,7 +1,7 @@
 "use strict";
 
 var grunt = require("grunt");
-var file = require("../lib/file");
+var file = require("../file");
 
 describe("file", function() {
 
