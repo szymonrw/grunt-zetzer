@@ -19,6 +19,7 @@ module.exports = function(grunt) {
       templates: ".",
       env: {},
       dot_template_settings: {},
+      marked_settings: {},
       meta_data_separator: /\r?\n\r?\n/
     });
 
@@ -30,7 +31,9 @@ module.exports = function(grunt) {
         require("zetzer/dot")({
           template_settings: options.dot_template_settings
         }),
-        require("zetzer/markdown")
+        require("zetzer/markdown")({
+          marked_settings: options.marked_settings
+        })
       ]
     });
 
