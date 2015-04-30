@@ -4,6 +4,8 @@ var JASMINE_CMD = (process.platform === "win32"
                    ? "\"node_modules/.bin/jasmine-node.cmd\""
                    : "node_modules/.bin/jasmine-node");
 
+var FIXTURES = "node_modules/zetzer/builder_specs/default";
+
 module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-jshint");
   grunt.loadNpmTasks("grunt-contrib-clean");
@@ -21,8 +23,8 @@ module.exports = function (grunt) {
     zetzer: {
       fixtures: {
         options: {
-          partials: "spec/includes",
-          templates: "spec/templates",
+          partials: FIXTURES + "/includes",
+          templates: FIXTURES + "/templates",
           dot_settings: {
             varname: 'it'
           },
@@ -32,8 +34,8 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: "spec/fixtures",
-          src: "*.html",
+          cwd: FIXTURES + "/fixtures",
+          src: "*.*",
           dest: "tmp",
           ext: ".html",
           flatten: true

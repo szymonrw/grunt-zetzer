@@ -5,8 +5,9 @@ var file = require("../file");
 var parse_setup = require("zetzer/parse");
 var compilers_setup = require("zetzer/compilers");
 var process_file_setup = require("zetzer/process");
+var default_options = require("zetzer/defaults");
 
-var _ = require("underscore");
+var _ = require("lodash");
 
 module.exports = function(grunt) {
 
@@ -14,14 +15,13 @@ module.exports = function(grunt) {
 
   function zetzer () {
 
-    var options = this.options({
+    var options = this.options(_.merge({}, default_options, {
       partials: ".",
       templates: ".",
       env: {},
-      dot_template_settings: {},
-      marked_settings: {},
-      meta_data_separator: /\r?\n\r?\n/
-    });
+      dot_settings: {},
+      marked_settings: {}
+    }));
 
     var parse = parse_setup(options.meta_data_separator);
 

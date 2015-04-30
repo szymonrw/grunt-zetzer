@@ -3,6 +3,8 @@
 var grunt = require("grunt");
 var file = require("../file");
 
+var FIXTURES = "node_modules/zetzer/builder_specs/default";
+
 describe("file", function() {
 
   describe("find_closest_match", function() {
@@ -10,17 +12,17 @@ describe("file", function() {
     var find_closest_match = file.find_closest_match;
 
     it("returns an accurate filepath given a filename and folder to look in", function() {
-      var filepath = find_closest_match("spec/includes", "example.html");
+      var filepath = find_closest_match(FIXTURES + "/includes", "example.html");
       expect(grunt.file.exists(filepath)).toBeTruthy();
     });
 
     it("returns an accurate filepath given a filename and an empty string folder", function() {
-      var filepath = find_closest_match("", "spec/includes/example.html");
+      var filepath = find_closest_match("", FIXTURES + "/includes/example.html");
       expect(grunt.file.exists(filepath)).toBeTruthy();
     });
 
     it("returns an accurate filepath given a filename with no extension", function() {
-      var filepath = find_closest_match("spec/includes", "example");
+      var filepath = find_closest_match(FIXTURES + "/includes", "example");
       expect(grunt.file.exists(filepath)).toBeTruthy();
     });
 

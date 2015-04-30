@@ -19,11 +19,11 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-node spec"
+    "test": "jasmine-node spec"
   },
   "dependencies": {
-    "zetzer": "^3.0.0",
-    "underscore": "^1.6.0"
+    "lodash": "^3.7.0",
+    "zetzer": "^3.0.0"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.0",

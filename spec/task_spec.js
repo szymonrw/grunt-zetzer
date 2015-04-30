@@ -3,6 +3,8 @@
 var exec = require("child_process").exec;
 var fs = require("fs");
 
+var FIXTURES = "node_modules/zetzer/builder_specs/default";
+
 describe("stencil task", function () {
   it("all fixtures have expected result", function (done) {
     exec("grunt clean zetzer:fixtures", function (error, stdout, stderr) {
@@ -11,7 +13,7 @@ describe("stencil task", function () {
           throw Error(stdout + stderr);
         }
 
-        var expected_dir = "spec/expected";
+        var expected_dir = FIXTURES + "/expected";
         var tmp_dir = "tmp";
 
         fs.readdirSync(expected_dir).forEach(function (name) {
