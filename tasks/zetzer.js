@@ -29,10 +29,10 @@ module.exports = function(grunt) {
       read_content: _.compose(parse.content, grunt.file.read),
       compilers: [
         require("zetzer/dot")({
-          template_settings: options.dot_template_settings
+          settings: options.dot_settings || options.dot_template_settings
         }),
         require("zetzer/markdown")({
-          marked_settings: options.marked_settings
+          settings: options.marked_settings
         })
       ]
     });

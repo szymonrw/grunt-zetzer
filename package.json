@@ -1,7 +1,7 @@
 {
   "name": "grunt-zetzer",
   "description": "Grunt plugin for Zetzer",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "homepage": "https://github.com/brainshave/zetzer",
   "author": "Elise Hein <elisehein@gmail.com>",
   "contributors": [
@@ -22,7 +22,7 @@
     "test": "./node_modules/.bin/jasmine-node spec"
   },
   "dependencies": {
-    "zetzer": "^2.0.0",
+    "zetzer": "^3.0.0",
     "underscore": "^1.6.0"
   },
   "devDependencies": {

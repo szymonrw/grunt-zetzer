@@ -23,8 +23,8 @@ module.exports = function (grunt) {
         options: {
           partials: "spec/includes",
           templates: "spec/templates",
-          dot_template_settings: {
-            strip: true
+          dot_settings: {
+            varname: 'it'
           },
           env: {
             parameter: "value"
