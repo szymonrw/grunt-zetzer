@@ -22,15 +22,15 @@
     "test": "./node_modules/.bin/jasmine-node spec"
   },
   "dependencies": {
-    "zetzer": "^2.0.0",
-    "underscore": "^1.6.0"
+    "underscore": "^1.12.0",
+    "zetzer": "^2.0.1"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt": "~0.4.1",
-    "jasmine-node": "latest",
-    "grunt-shell": "~0.4.0"
+    "grunt": "^1.3.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-shell": "^3.0.1",
+    "jasmine-node": "^3.0.0"
   },
   "keywords": [
     "gruntplugin",
